@@ -17,7 +17,7 @@ The React Compiler is enabled on this template. See [this documentation](https:/
 Note: This will impact Vite dev & build performances.
 
 ## Other dependencies
-- React Router DOM
+- React DOM + React Router DOM
 - React Bootstrap + Bootstrap
 - lucide-react
 - github-pages (gh-pages)

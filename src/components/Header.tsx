@@ -1,5 +1,6 @@
 ﻿import { Navbar, Nav, Container} from "react-bootstrap";
-import {base} from "../assets/url";
+// use Vite-provided base at runtime
+const base = import.meta.env.BASE_URL || "/";
 
 const Header = () => {
 

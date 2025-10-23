@@ -1,6 +1,7 @@
 ﻿import { Container, Row, Col } from "react-bootstrap";
 import { AtSign } from 'lucide-react';
-import {base} from "../assets/url";
+// use Vite-provided base at runtime
+const base = import.meta.env.BASE_URL || "/";
 
 const Footer = () => {
     return (
