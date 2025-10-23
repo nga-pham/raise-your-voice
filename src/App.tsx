@@ -1,9 +1,10 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import {base} from "./assets/url";
+//import NotFound from "./pages/NotFound";
+//import {base} from "./assets/url";
 
+/*
 const App = () => (
         <BrowserRouter basename={base}>
             <Routes>
@@ -12,5 +13,10 @@ const App = () => (
             </Routes>
         </BrowserRouter>
 );
+*/
+
+const App = () => (
+    <Index />
+)
 
 export default App
