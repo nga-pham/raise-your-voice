@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import {Button} from 'react-bootstrap';
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Index from "./pages/Index";
+import NotFound from "./pages/NotFound";
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-      </div>
-    </>
-  )
-}
+const App = () => (
+        <BrowserRouter basename="/raise-your-voice">
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </BrowserRouter>
+);
 
 export default App
