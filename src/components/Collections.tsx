@@ -10,7 +10,7 @@ const Collections = () => {
     return (
         <>
             {/* You are not alone */}
-            <section className="py-5 mt-2 ">
+            <section className="py-5 mt-2">
                 <Container>
                     <Row className="text-center justify-content-center p-3">
                         <h2 className="mb-4" style={{fontWeight: 'bold'}}>Bạn không cô đơn</h2>
