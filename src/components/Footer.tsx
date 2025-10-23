@@ -1,5 +1,6 @@
 ﻿import { Container, Row, Col } from "react-bootstrap";
 import { AtSign } from 'lucide-react';
+import {base} from "../assets/url";
 
 const Footer = () => {
     return (
@@ -13,13 +14,13 @@ const Footer = () => {
                     </Col>
                     <Col lg={4}>
                         <h3>Tìm kiếm</h3>
-                        <a href="/facts" className="d-block mb-2 text-decoration-none text-dark">Hiểu về lạm dụng tình dục</a>
-                        <a href="/practices" className="d-block mb-2 text-decoration-none text-dark">Cách đối phó</a>
+                        <a href={`${base}/facts`} className="d-block mb-2 text-decoration-none text-dark">Hiểu về lạm dụng tình dục</a>
+                        <a href={`${base}/practices`} className="d-block mb-2 text-decoration-none text-dark">Cách đối phó</a>
                     </Col>
                     <Col lg={4}>
-                        <a href="/policy" className="text-decoration-none text-dark d-block mb-2">Chính sách bảo mật</a>
-                        <a href="/terms" className="text-decoration-none text-dark d-block mb-2">Điều khoản dịch vụ</a>
-                        <a href="/about" className="d-block mb-2 text-decoration-none text-dark">Về tôi</a>
+                        <a href={`${base}/policy`} className="text-decoration-none text-dark d-block mb-2">Chính sách bảo mật</a>
+                        <a href={`${base}/term`} className="text-decoration-none text-dark d-block mb-2">Điều khoản dịch vụ</a>
+                        <a href={`${base}/about`} className="d-block mb-2 text-decoration-none text-dark">Về tôi</a>
                     </Col>
                 </Row>
                 <Row className="mt-4">
