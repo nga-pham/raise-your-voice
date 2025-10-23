@@ -17,7 +17,7 @@ const Header = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto align-items-center"> 
             <Nav.Link href={`${base}/facts`}>Hiểu về lạm dụng tình dục</Nav.Link>
-            <Nav.Link href={`${base}/practices`}>Cách đối phó</Nav.Link>
+            <Nav.Link href={`${base}/organizations`}>Nơi hỗ trợ nạn nhân</Nav.Link>
             <Nav.Link href={`${base}/about`}>Về tôi</Nav.Link>
             </Nav>
         </Navbar.Collapse>

@@ -1,10 +1,12 @@
-﻿import { Container, Row, Col, Card } from "react-bootstrap";
+﻿import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import jsonData from "../assets/you-are-not-alone.json";
+import { useNavigate } from 'react-router-dom';
 
 const lang = "vn"; // "en" or "vn"
 
-
 const Collections = () => {
+
+
     return (
         <>
             {/* You are not alone */}
@@ -18,18 +20,19 @@ const Collections = () => {
                             return <Row>
                                 {item.collection.map((collection, _idx) => {
                                     return (
-                                        <Col md={4}>
-                                            <Card key={_idx} className="m-2" style={{ minWidth: '18rem' }}>
+                                        <Col md={4} key={_idx} >
+                                            <Card className="m-2" style={{ minWidth: '18rem' }}>
                                         <Card.Img variant="top" src={collection.photo} />
                                         <Card.Body>
                                             <Card.Title>
                                             <p style={{ color: '#000', textAlign: 'left' }}>{collection.title}</p>
                                             </Card.Title>
                                             <Card.Text style={{ color: '#000', textAlign: 'left', fontSize: '1rem' }}>
-                                                <p>{collection.description}</p>
+                                                {collection.description}
                                             </Card.Text>
-
+                                            <Card.Link href={collection.references}>{collection.caption}</Card.Link>
                                         </Card.Body>
+                                            
                                     </Card>
                                         </Col>
                                     )

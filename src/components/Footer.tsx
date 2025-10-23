@@ -16,7 +16,7 @@ const Footer = () => {
                     <Col lg={4}>
                         <h3>Tìm kiếm</h3>
                         <a href={`${base}/facts`} className="d-block mb-2 text-decoration-none text-dark">Hiểu về lạm dụng tình dục</a>
-                        <a href={`${base}/practices`} className="d-block mb-2 text-decoration-none text-dark">Cách đối phó</a>
+                        <a href={`${base}/organizations`} className="d-block mb-2 text-decoration-none text-dark">Nơi hỗ trợ nạn nhân</a>
                     </Col>
                     <Col lg={4}>
                         <a href={`${base}/policy`} className="text-decoration-none text-dark d-block mb-2">Chính sách bảo mật</a>
