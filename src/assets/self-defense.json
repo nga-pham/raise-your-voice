@@ -1,0 +1,72 @@
+[
+  {
+    "lang": "en",
+    "title": "English",
+    "other": "Vietnamese",
+    "collection": [
+      {
+        "title": "Strategies To Reduce Risk & Increase Safety",
+        "photo": "https://static.wixstatic.com/media/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg/v1/fit/w_924,h_520/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg?fileUsed=false",
+        "description": "Everyone deserves to feel safe. Explore RAINN’s practical steps for planning ahead, setting boundaries, and navigating uncertain situations with confidence.",
+        "references": "https://rainn.org/get-informed/prevention/strategies-to-reduce-risk-increase-safety/",
+        "caption": "Read on RAINN"
+      },
+      {
+        "title": "How we can end sexual harassment at work",
+        "photo": "https://media.sgff.io/pagedata/2017-12-19/1513656672910/SH_Tiles_384x177_How_We_Can_End_Sexual_Harassment_At_Work@2x.jpg",
+        "description": "When Gretchen Carlson spoke out about her experience of workplace sexual harassment, it inspired women everywhere to take their power back and tell the world what happened to them. ",
+        "references": "https://www.ted.com/talks/gretchen_carlson_how_we_can_end_sexual_harassment_at_work/transcript?language=en",
+        "caption": "Watch on Ted Talk"
+      },
+      {
+        "title": "How are sexual harassers be punished in Vietnam",
+        "photo": "https://cdn.thuvienphapluat.vn/uploads/tintuc/2022/04/05/quay-roi-tinh-duc-xu-ly.png",
+        "description": "Learn about the regulations of Vietnamese law on penalties for sexual harassment.",
+        "references": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/40143/nguoi-co-hanh-vi-quay-roi-tinh-duc-bi-xu-ly-the-nao",
+        "caption": "Read at Thư viện pháp luật"
+      },
+      {
+        "title": "Frequently Asked Questions about Sexual Harassment in the Workplace",
+        "photo": "https://static.wixstatic.com/media/11062b_ed558759eb1447b28d067c5e1f94e22c~mv2.jpg/v1/fit/w_924,h_520/11062b_ed558759eb1447b28d067c5e1f94e22c~mv2.jpg?fileUsed=false",
+        "description": "How to know if you were harassed and advice on taking action - including what to expect if you make an internal or legal complaint",
+        "references": "https://nwlc.org/wp-content/uploads/2016/11/Sexual-Harassment-FAQ.pdf",
+        "caption": "Read at the US National Women's Law Center"
+      }
+    ]
+  },
+  {
+    "lang": "vn",
+    "title": "Tiếng Việt",
+    "other": "Tiếng Anh",
+    "collection": [
+      {
+        "title": "Chiến lược để giảm thiểu rủi ro và tăng cường sự an toàn",
+        "photo": "https://static.wixstatic.com/media/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg/v1/fit/w_924,h_520/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg?fileUsed=false",
+        "description": "Mọi người đều xứng đáng được cảm thấy an toàn. Khám phá các bước thực hành của RAINN để lập kế hoạch trước, thiết lập ranh giới và tự tin ứng phó với các tình huống bất định.",
+        "references": "https://rainn.org/get-informed/prevention/strategies-to-reduce-risk-increase-safety/",
+        "caption": "Xem thêm trên RAINN"
+      },
+      {
+        "title": "Chấm dứt nạn quấy rối tình dục nơi công sở",
+        "photo": "https://media.sgff.io/pagedata/2017-12-19/1513656672910/SH_Tiles_384x177_How_We_Can_End_Sexual_Harassment_At_Work@2x.jpg",
+        "description": "Khi lên tiếng về tố cáo nạn quấy rối tình dục nơi công sở, Gretchen Carlson đã truyền cảm hứng cho phụ nữ khắp nơi lên tiếng đòi quyền lợi và nói ra những điều mà họ đã trải qua.",
+        "references": "https://www.ted.com/talks/gretchen_carlson_how_we_can_end_sexual_harassment_at_work/transcript?language=vi",
+        "caption": "Xem thêm trên Ted Talk"
+      },
+      {
+        "title": "Người có hành vi quấy rối tình dục bị xử lý thế nào?",
+        "photo": "https://cdn.thuvienphapluat.vn/uploads/tintuc/2022/04/05/quay-roi-tinh-duc-xu-ly.png",
+        "description": "Cùng tìm hiểu các quy định của pháp luật Việt Nam về mức phạt cho hành vi quấy rối tình dục",
+        "references": "https://thuvienphapluat.vn/chinh-sach-phap-luat-moi/vn/ho-tro-phap-luat/tu-van-phap-luat/40143/nguoi-co-hanh-vi-quay-roi-tinh-duc-bi-xu-ly-the-nao",
+        "caption": "Xem thêm tại Thư viện pháp luật"
+      },
+      {
+        "title": "Những câu hỏi thường gặp về quấy rối tình dục tại nơi làm việc",
+        "photo": "https://static.wixstatic.com/media/11062b_ed558759eb1447b28d067c5e1f94e22c~mv2.jpg/v1/fit/w_924,h_520/11062b_ed558759eb1447b28d067c5e1f94e22c~mv2.jpg?fileUsed=false",
+        "description": "Cách nhận biết bạn có bị quấy rối hay không và lời khuyên về cách hành động - bao gồm những điều cần lưu ý nếu bạn khiếu nại nội bộ hoặc khiếu nại pháp lý.",
+        "references": "https://nwlc.org/wp-content/uploads/2016/11/Sexual-Harassment-FAQ.pdf",
+        "caption": "Xem thêm tại Trung tâm Luật Phụ nữ Quốc gia Hoa Kỳ"
+      }
+    ]
+  }
+]

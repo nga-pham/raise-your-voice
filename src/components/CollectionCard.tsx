@@ -11,7 +11,7 @@ interface CollectionCardProps {
 
 const CollectionCard = ({key, title, photo, description, references, caption}: CollectionCardProps) => {
     return (
-        <Col md={4} >
+        <Col md={4} key={key }>
             <Card className="m-2" style={{ minWidth: '18rem' }}>
                 <Card.Img variant="top" src={photo} />
                 <Card.Body>
