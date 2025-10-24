@@ -1,7 +1,10 @@
 ﻿import { Card, Col } from "react-bootstrap";
 
+const base = import.meta.env.BASE_URL || "/";
+
 interface CollectionCardProps {
-    key: number | undefined
+    id: number | undefined,
+    type: string | "",
     title: string | "";
     photo: string | "";
     description: string | "";
@@ -9,9 +12,9 @@ interface CollectionCardProps {
     caption: string | "";
     }
 
-const CollectionCard = ({key, title, photo, description, references, caption}: CollectionCardProps) => {
+const CollectionCard = ({id, type, title, photo, description}: CollectionCardProps) => {
     return (
-        <Col md={4} key={key }>
+        <Col md={4} key={id }>
             <Card className="m-2" style={{ minWidth: '18rem' }}>
                 <Card.Img variant="top" src={photo} />
                 <Card.Body>
@@ -21,7 +24,7 @@ const CollectionCard = ({key, title, photo, description, references, caption}: C
                     <Card.Text style={{ color: '#000', textAlign: 'left', fontSize: '1rem' }}>
                         {description}
                     </Card.Text>
-                    <Card.Link href={references}>{caption}</Card.Link>
+                    <Card.Link href={`${base}/detail/${type}/${id}` }>Xem thêm</Card.Link>
                 </Card.Body>
             </Card>
         </Col>

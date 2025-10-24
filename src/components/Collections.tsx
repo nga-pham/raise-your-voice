@@ -1,8 +1,9 @@
 ﻿import { Container, Row } from "react-bootstrap";
 import vietnameseData from "../assets/vi.json"
 import CollectionCard from "../components/CollectionCard"
+import typeOfArticles from "../assets/type-of-articles.json"
 
-const lang = "vi"; // "en" or "vn"
+const lang = "vi"; // "en" or "vi"
 
 const Collections = () => {
 
@@ -19,7 +20,8 @@ const Collections = () => {
                                 {vietnameseData.collectionKeyFacts.map((collection, _idx) => {
                                 return (
                                     <CollectionCard
-                                        key={_idx}
+                                        id={_idx}
+                                        type={typeOfArticles[0]}
                                         title={collection.title}
                                         photo={collection.photo}
                                         description={collection.description}
@@ -40,7 +42,8 @@ const Collections = () => {
                                 {vietnameseData.collectionSelfDefense.map((collection, _idx) => {
                                     return (
                                         <CollectionCard
-                                            key={_idx}
+                                            id={_idx}
+                                            type={typeOfArticles[1]}
                                             title={collection.title}
                                             photo={collection.photo}
                                             description={collection.description}
@@ -61,7 +64,8 @@ const Collections = () => {
                                 {vietnameseData.collectionYouAreNotAlone.map((collection, _idx) => {
                                     return (
                                         <CollectionCard
-                                            key={_idx}
+                                            id={_idx}
+                                            type={typeOfArticles[2]}
                                             title={collection.title}
                                             photo={collection.photo}
                                             description={collection.description}

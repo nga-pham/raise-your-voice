@@ -105,5 +105,31 @@
       "references": "https://www.cbsnews.com/news/book-excerpt-nobodys-girl-by-virginia-roberts-giuffre/",
       "caption": "Read at CBS News"
     }
+  ],
+  "centerToSupport": [
+    {
+      "name": "Hagar International Vietnam",
+      "photo": "https://static.wixstatic.com/media/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg/v1/fit/w_924,h_520/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg?fileUsed=false",
+      "description": "Mọi người đều xứng đáng được sống một cuộc sống tự do phát triển. Công việc của Hagar bắt nguồn từ niềm tin rằng mỗi cá nhân đều xứng đáng được tự do, được tôn trọng và có một cuộc sống không bị bóc lột.",
+      "references": "https://hagarinternational.org/vietnam/"
+    },
+    {
+      "name": "Tổng đài Quốc gia bảo vệ trẻ em, đường dây nóng tư vấn và hỗ trợ nạn nhân mua bán người 111 (Bộ Lao động – Thương binh và Xã hội)",
+      "photo": "https://sldtbxh.quangbinh.gov.vn/documents/43912/0/T%E1%BB%95ng+%C4%91%C3%A0i+111.png/fed61470-91e0-9d51-cefa-32233f875e1a?t=1706494398878",
+      "description": "Bảo vệ trẻ em: Tiếp nhận thông báo, tố giác từ cơ quan, tổ chức, cơ sở giáo dục, gia đình, cá nhân qua điện thoại...",
+      "references": "/Danh-ba-11x18cm-2203.pdf/"
+    },
+    {
+      "name": "Cục Trợ giúp pháp lý, Bộ Tư pháp",
+      "photo": "https://static.wixstatic.com/media/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg/v1/fit/w_924,h_520/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg?fileUsed=false",
+      "description": "Tiếp nhận các cuộc gọi của người dân của 63 tỉnh, thành phố trực thuộc Trung ương và hướng dẫn chuyển tuyến về trung tâm trợ giúp pháp lý nhà nước của tỉnh, thành phố trực thuộc Trung ương...",
+      "references": "/Danh-ba-11x18cm-2203.pdf/"
+    },
+    {
+      "name": "Ngôi nhà Bình Yên (Hội Liên hiệp Phụ nữ Việt Nam)",
+      "photo": "https://static.wixstatic.com/media/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg/v1/fit/w_924,h_520/11062b_d74bf82afbbe46ab80a3e9a7d95575f5~mv2.jpg?fileUsed=false",
+      "description": "- Hỗ trợ phụ nữ, trẻ em là nạn nhân của bạo lực gia đình, xâm hại và mua bán trở về trong cả nước.- Cung cấp gói dịch vụ hỗ trợ toàn diện (nơi ăn ở, hỗ trợ tâm lý, hỗ trợ pháp lý...",
+      "references": "/Danh-ba-11x18cm-2203.pdf/"
+    }
   ]
 }
