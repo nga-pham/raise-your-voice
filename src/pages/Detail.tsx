@@ -1,10 +1,12 @@
 ﻿import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Breadcrumb } from "react-bootstrap";
 import { useParams } from 'react-router-dom';
 import vietnameseData from "../assets/vi.json"
 import typeData from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
+
+const base = "/raise-your-voice"
 
 const Detail = () => {
 
@@ -17,11 +19,17 @@ const Detail = () => {
     let currentArticle
     // id is index of article in collection
     if (category === typeData[0]) {
-        currentArticle = vietnameseData.collectionKeyFacts.find((item, index) => index === Number(id))   
+        currentArticle = vietnameseData.collectionKeyFacts.find((item, index) => {
+            if (index === Number(id)) return item
+        })   
     } else if (category === typeData[1]) {
-        currentArticle = vietnameseData.collectionSelfDefense.find((item, index) => index === Number(id))  
+        currentArticle = vietnameseData.collectionSelfDefense.find((item, index) => {
+            if (index === Number(id)) return item
+        })  
     } else if (category === typeData[2]) {
-        currentArticle = vietnameseData.collectionYouAreNotAlone.find((item, index) => index === Number(id))
+        currentArticle = vietnameseData.collectionYouAreNotAlone.find((item, index) => {
+            if (index === Number(id)) return item
+        })
     }
     // If article not found, show a simple message
     if (!currentArticle) {
@@ -46,12 +54,26 @@ const Detail = () => {
             <Header />
             <section className="py-5 mt-2">
                 <Container>
-                    <Row className="text-center justify-content-center p-3">Breadcrumb to back</Row>
+                    <Row className="text-center justify-content-center p-3"><Breadcrumb>
+                        <Breadcrumb.Item href={base }>Home</Breadcrumb.Item>
+                        <Breadcrumb.Item active>{currentArticle.title}</Breadcrumb.Item>
+                    </Breadcrumb></Row>
                     <Row className="text-center justify-content-center p-3">
-                        <h2 className="mb-4" style={{ fontWeight: 'bold' }}>Title here</h2>
-                        <p style={{ color: 'rgba(0, 0, 0, 0.5)' }}>Author here</p>
-                        <p style={{ color: 'rgba(1, 0, 0, 0.8)', fontStyle: 'italic' }}>Credit here</p>
-                        <p className="mb-4" style={{ fontSize: '1.5rem' }}>{currentArticle.title}</p>
+                        {/*title*/}
+                        <h2 className="mb-4" style={{ fontWeight: 'bold' }}>{currentArticle.title}</h2>
+                        {/*author*/}
+                        <p style={{ color: 'rgba(0, 0, 0, 0.5)' }}>Author: {currentArticle.author}</p>
+                        {/*credit*/}
+                        <p style={{ color: 'rgba(1, 0, 0, 0.8)', fontStyle: 'italic' }}>
+                            Lược dịch từ <a href={currentArticle.references}>{currentArticle.references}</a>
+                        </p>
+                        <img src={currentArticle.photo} />
+                    </Row>
+                    <Row>
+                        {/*content*/}
+                        {currentArticle.content.map(paragraph => (
+                            <p className="mb-4 text-start" style={{ fontSize: '1.25rem' }}>{paragraph}</p>
+                        ))}
                     </Row>
                 </Container>
             </section>
