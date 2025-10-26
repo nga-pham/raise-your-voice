@@ -17,16 +17,17 @@ const Collections = () => {
                         <p className="mb-4" style={{ fontSize: '1.5rem' }}>Cùng tìm hiểu về quấy rối, bạo lực và xâm hại tình dục và các vấn đề liên quan</p>
                         {vietnameseData.lang.trim() === lang.trim() ?
                             <Row>
-                                {vietnameseData.collectionKeyFacts.map((collection, _idx) => {
+                                {vietnameseData.collectionKeyFacts.map((article, _idx) => {
                                 return (
                                     <CollectionCard
                                         id={_idx}
                                         type={typeOfArticles[0]}
-                                        title={collection.title}
-                                        photo={collection.photo}
-                                        description={collection.description}
-                                        references={collection.references}
-                                        caption={collection.caption}
+                                        title={article.title}
+                                        photo={article.photo}
+                                        description={article.description}
+                                        content={article.content }
+                                        references={article.references}
+                                        caption={article.caption}
                                     />
                                 )
                             })}
@@ -39,16 +40,17 @@ const Collections = () => {
                         <p className="mb-4" style={{ fontSize: '1.5rem' }}>Thực hành việc tự bảo vệ bản thân và hàn gắn trước hành vi quấy rối và xâm hại tình dục</p>
                         {vietnameseData.lang.trim() === lang.trim() ?
                             <Row>
-                                {vietnameseData.collectionSelfDefense.map((collection, _idx) => {
+                                {vietnameseData.collectionSelfDefense.map((article, _idx) => {
                                     return (
                                         <CollectionCard
                                             id={_idx}
                                             type={typeOfArticles[1]}
-                                            title={collection.title}
-                                            photo={collection.photo}
-                                            description={collection.description}
-                                            references={collection.references}
-                                            caption={collection.caption}
+                                            title={article.title}
+                                            photo={article.photo}
+                                            description={article.description}
+                                            content={article.content}
+                                            references={article.references}
+                                            caption={article.caption}
                                         />
                                     )
                                 })}
@@ -61,16 +63,17 @@ const Collections = () => {
                         <p className="mb-4" style={{fontSize: '1.5rem'}}>Cùng lắng nghe người nổi tiếng chia sẻ về lạm dụng tình dục</p>
                         {vietnameseData.lang.trim() === lang.trim() ?
                             <Row>
-                                {vietnameseData.collectionYouAreNotAlone.map((collection, _idx) => {
+                                {vietnameseData.collectionYouAreNotAlone.map((article, _idx) => {
                                     return (
                                         <CollectionCard
                                             id={_idx}
                                             type={typeOfArticles[2]}
-                                            title={collection.title}
-                                            photo={collection.photo}
-                                            description={collection.description}
-                                            references={collection.references}
-                                            caption={collection.caption}
+                                            title={article.title}
+                                            photo={article.photo}
+                                            description={article.description}
+                                            content={article.content}
+                                            references={article.references}
+                                            caption={article.caption}
                                         />
                                     )
                                 })}

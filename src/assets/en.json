@@ -14,7 +14,7 @@
       "title": "What “Counts” as Sexual Violence?",
       "photo": "https://static.wixstatic.com/media/c04b3810f91d4a6bba6c350c3c44393b.jpg/v1/fit/w_924,h_520/c04b3810f91d4a6bba6c350c3c44393b.jpg?fileUsed=false",
       "description": "Learn what sexual violence is, how it can affect you, and why understanding your experience matters for healing.",
-      "references": "https://rainn.org/get-informed/prevention/prevention-tips-for-parents-caregivers/warning-signs-to-watch-for/",
+      "references": "https://rainn.org/get-informed/get-the-facts-about-sexual-violence/what-counts-as-sexual-violence/",
       "caption": "Read at RAINN"
     },
     {
@@ -33,13 +33,6 @@
     }
   ],
   "collectionSelfDefense": [
-    {
-      "title": "Strategies To Reduce Risk & Increase Safety",
-      "photo": "https://static.wixstatic.com/media/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg/v1/fit/w_924,h_520/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg?fileUsed=false",
-      "description": "Everyone deserves to feel safe. Explore RAINN’s practical steps for planning ahead, setting boundaries, and navigating uncertain situations with confidence.",
-      "references": "https://rainn.org/get-informed/prevention/strategies-to-reduce-risk-increase-safety/",
-      "caption": "Read on RAINN"
-    },
     {
       "title": "How we can end sexual harassment at work",
       "photo": "https://media.sgff.io/pagedata/2017-12-19/1513656672910/SH_Tiles_384x177_How_We_Can_End_Sexual_Harassment_At_Work@2x.jpg",
@@ -60,6 +53,13 @@
       "description": "How to know if you were harassed and advice on taking action - including what to expect if you make an internal or legal complaint",
       "references": "https://nwlc.org/wp-content/uploads/2016/11/Sexual-Harassment-FAQ.pdf",
       "caption": "Read at the US National Women's Law Center"
+    },
+    {
+      "title": "Strategies To Reduce Risk & Increase Safety",
+      "photo": "https://static.wixstatic.com/media/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg/v1/fit/w_924,h_520/11062b_91bce124d50a426ca72ad3dfb218948a~mv2.jpeg?fileUsed=false",
+      "description": "Everyone deserves to feel safe. Explore RAINN’s practical steps for planning ahead, setting boundaries, and navigating uncertain situations with confidence.",
+      "references": "https://rainn.org/get-informed/prevention/strategies-to-reduce-risk-increase-safety/",
+      "caption": "Read on RAINN"
     }
   ],
   "collectionYouAreNotAlone": [
