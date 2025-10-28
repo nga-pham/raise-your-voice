@@ -4,6 +4,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Detail from "./pages/Detail"
 import Organization from "./pages/Organization"
+import About from "./pages/About"
 
 // use Vite-provided base at runtime
 const base = import.meta.env.BASE_URL || "/";
@@ -17,7 +18,8 @@ const App = () => (
                 <Route path="/detail/self-defense/:id" element={<Detail />} />
                 <Route path="/detail/you-are-not-alone/:id" element={<Detail />} />
             {/* other */}
-            <Route path="/organization" element={<Organization /> } />
+            <Route path="/organization" element={<Organization />} />
+            <Route path="/about" element={<About /> } />
             <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>

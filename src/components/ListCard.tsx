@@ -1,7 +1,4 @@
 ﻿import { Card, Container } from "react-bootstrap";
-
-const base = import.meta.env.BASE_URL || "/";
-
 interface ListCardProps {
     id: number | undefined,
     name: string | "";
