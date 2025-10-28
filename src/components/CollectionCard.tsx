@@ -25,7 +25,7 @@ const CollectionCard = ({ id, type, title, photo, description, content, referenc
                     <Card.Text style={{ color: '#000', textAlign: 'left', fontSize: '1rem' }}>
                         {description}
                     </Card.Text>
-                    {content.length > 0 ? <Card.Link href={`${base}/detail/${type}/${id}`}>Xem thêm</Card.Link> :
+                    {content.length > 0 ? <Card.Link href={`${base}detail/${type}/${id}`}>Xem thêm</Card.Link> :
                         <Card.Link href={references}>Xem thêm</Card.Link>
                     }
                 </Card.Body>
