@@ -1,6 +1,9 @@
-﻿import { Navbar, Nav, Container} from "react-bootstrap";
+﻿import { Navbar, Nav, Container } from "react-bootstrap";
+
 // use Vite-provided base at runtime
 const base = import.meta.env.BASE_URL || "/";
+
+const lang = "en"; // "en" or "vi"
 
 const Header = () => {
 
@@ -15,11 +18,18 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto align-items-center"> 
-            <Nav.Link href={`${base}detail`}>Hiểu về lạm dụng tình dục</Nav.Link>
-            <Nav.Link href={`${base}organization`}>Nơi hỗ trợ nạn nhân</Nav.Link>
-            <Nav.Link href={`${base}about`}>Về tôi</Nav.Link>
-            </Nav>
+                    {lang.trim() === "vi" ? 
+                        <Nav className="ms-auto align-items-center">
+                            <Nav.Link href={`${base}detail`}>Hiểu về lạm dụng tình dục</Nav.Link>
+                            <Nav.Link href={`${base}organization`}>Nơi hỗ trợ nạn nhân</Nav.Link>
+                            <Nav.Link href={`${base}about`}>Về tôi</Nav.Link>
+                        </Nav>
+                        : <Nav className="ms-auto align-items-center">
+                            <Nav.Link href={`${base}detail`}>Learn about sexual abuse</Nav.Link>
+                            <Nav.Link href={`${base}organization`}>Victim Support Centers</Nav.Link>
+                            <Nav.Link href={`${base}about`}>About me</Nav.Link>
+                        </Nav>
+                }
         </Navbar.Collapse>
 
       </Container>

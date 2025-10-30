@@ -11,9 +11,10 @@ interface CollectionCardProps {
     content: string[] | [];
     references: string | "";
     caption: string | "";
+    language: string | "";
     }
 
-const CollectionCard = ({ id, type, title, photo, description, content, references }: CollectionCardProps) => {
+const CollectionCard = ({ id, type, title, photo, description, content, references, language }: CollectionCardProps) => {
     return (
         <Col md={4} key={id }>
             <Card className="m-2" style={{ minWidth: '18rem' }}>
@@ -25,8 +26,8 @@ const CollectionCard = ({ id, type, title, photo, description, content, referenc
                     <Card.Text style={{ color: '#000', textAlign: 'left', fontSize: '1rem' }}>
                         {description}
                     </Card.Text>
-                    {content.length > 0 ? <Card.Link href={`${base}detail/${type}/${id}`}>Xem thêm</Card.Link> :
-                        <Card.Link href={references}>Xem thêm</Card.Link>
+                    {content.length > 0 ? <Card.Link href={`${base}detail/${type}/${id}`}>{language === "vi" ? "Xem thêm" : "Read more"}</Card.Link> :
+                        <Card.Link href={references}>{language === "vi" ? "Xem thêm" : "Read more"}</Card.Link>
                     }
                 </Card.Body>
             </Card>

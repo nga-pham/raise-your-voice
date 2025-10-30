@@ -7,6 +7,7 @@ import typeData from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
 
 const base = "/raise-your-voice"
+const lang = "en"; // "en" or "vi"
 
 const Detail = () => {
 
@@ -38,10 +39,16 @@ const Detail = () => {
                 <Header />
                 <section className="py-5">
                     <Container>
+                        {vietnameseData.lang.trim() === lang.trim() ?
                         <Row className="text-start g-5 mt-2">
+                            <h1 style={{ fontWeight: 'bold' }}>Không tìm thấy bài báo</h1>
+                            <p>Bài báo bạn yêu cầu không tồn tại. Chúng tôi xin lỗi vì sự bất tiện này.</p>
+                        </Row> 
+                        : <Row className="text-start g-5 mt-2">
                             <h1 style={{ fontWeight: 'bold' }}>Sorry, article not found</h1>
                             <p>The requested article does not exist.</p>
                         </Row>
+                    }
                     </Container>
                 </section>
                 <Footer />
@@ -58,17 +65,27 @@ const Detail = () => {
                         <Breadcrumb.Item href={base }>Home</Breadcrumb.Item>
                         <Breadcrumb.Item active>{currentArticle.title}</Breadcrumb.Item>
                     </Breadcrumb></Row>
-                    <Row className="text-center justify-content-center p-3">
-                        {/*title*/}
-                        <h2 className="mb-4" style={{ fontWeight: 'bold' }}>{currentArticle.title}</h2>
-                        {/*author*/}
-                        <p style={{ color: 'rgba(0, 0, 0, 0.5)' }}>Author: {currentArticle.author}</p>
-                        {/*credit*/}
-                        <p style={{ color: 'rgba(1, 0, 0, 0.8)', fontStyle: 'italic' }}>
-                            Lược dịch từ <a href={currentArticle.references}>{currentArticle.references}</a>
-                        </p>
-                        <img src={currentArticle.photo} />
-                    </Row>
+                    {vietnameseData.lang.trim() === lang.trim() ? 
+                        <Row className="text-center justify-content-center p-3">
+                            {/*title*/}
+                            <h2 className="mb-4" style={{ fontWeight: 'bold' }}>{currentArticle.title}</h2>
+                            {/*author*/}
+                            <p style={{ color: 'rgba(0, 0, 0, 0.5)' }}>Tác giả: {currentArticle.author}</p>
+                            {/*credit*/}
+                            <p style={{ color: 'rgba(1, 0, 0, 0.8)', fontStyle: 'italic' }}>
+                                Lược dịch từ <a href={currentArticle.references}>{currentArticle.references}</a>
+                            </p>
+                            <img src={currentArticle.photo} />
+                        </Row>
+                        : <Row className="text-center justify-content-center p-3">
+                            {/*title*/}
+                            <h2 className="mb-4" style={{ fontWeight: 'bold' }}>{currentArticle.title}</h2>
+                            {/*author*/}
+                            <p style={{ color: 'rgba(0, 0, 0, 0.5)' }}>Author: {currentArticle.author}</p>
+                            <img src={currentArticle.photo} />
+                        </Row>
+                    }
+                    
                     <Row>
                         {/*content*/}
                         {currentArticle.content.map(paragraph => (

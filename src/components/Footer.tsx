@@ -3,27 +3,50 @@ import { AtSign } from 'lucide-react';
 // use Vite-provided base at runtime
 const base = import.meta.env.BASE_URL || "/";
 
+const lang = "en"; // "en" or "vi"
+
 const Footer = () => {
     return (
         <section style={{ backgroundColor: "#F8F9FA" }}>
             <Container className="text-center pt-4" >
-                <Row>
-                    <Col lg={4}>
-                        <span className="fs-4 fw-bold m-0">Raise Your Voice</span>
-                        <p>Một blog đơn giản để hỗ trợ các nạn nhân bị tấn công tình dục, đặc biệt là phụ nữ Việt Nam ở nước ngoài, giúp họ đối phó với vấn đề này và chấn thương sau đó</p>
-                        <p><AtSign size={10} className="ms-3" /> <a href="mailto:ngapt.fit@gmail.com" className="text-decoration-none text-dark">ngapt.fit@gmail.com</a></p>
-                    </Col>
-                    <Col lg={4}>
-                        <h3>Tìm kiếm</h3>
-                        <a href={`${base}detail`} className="d-block mb-2 text-decoration-none text-dark">Hiểu về lạm dụng tình dục</a>
-                        <a href={`${base}organization`} className="d-block mb-2 text-decoration-none text-dark">Nơi hỗ trợ nạn nhân</a>
-                    </Col>
-                    <Col lg={4}>
-                        <a href={`${base}policy`} className="text-decoration-none text-dark d-block mb-2">Chính sách bảo mật</a>
-                        <a href={`${base}term`} className="text-decoration-none text-dark d-block mb-2">Điều khoản dịch vụ</a>
-                        <a href={`${base}about`} className="d-block mb-2 text-decoration-none text-dark">Về tôi</a>
-                    </Col>
-                </Row>
+                {lang.trim() === "vi" ? 
+                // Vietnamese content
+                    <Row>
+                        <Col lg={4}>
+                            <span className="fs-4 fw-bold m-0">Raise Your Voice</span>
+                            <p>Một blog đơn giản để hỗ trợ các nạn nhân bị tấn công tình dục, đặc biệt là phụ nữ Việt Nam ở nước ngoài, giúp họ đối phó với vấn đề này và chấn thương sau đó</p>
+                            <p><AtSign size={10} className="ms-3" /> <a href="mailto:ngapt.fit@gmail.com" className="text-decoration-none text-dark">ngapt.fit@gmail.com</a></p>
+                        </Col>
+                        <Col lg={4}>
+                            <h3>Tìm kiếm</h3>
+                            <a href={`${base}detail`} className="d-block mb-2 text-decoration-none text-dark">Hiểu về lạm dụng tình dục</a>
+                            <a href={`${base}organization`} className="d-block mb-2 text-decoration-none text-dark">Nơi hỗ trợ nạn nhân</a>
+                        </Col>
+                        <Col lg={4}>
+                            <a href={`${base}policy`} className="text-decoration-none text-dark d-block mb-2">Chính sách bảo mật</a>
+                            <a href={`${base}term`} className="text-decoration-none text-dark d-block mb-2">Điều khoản dịch vụ</a>
+                            <a href={`${base}about`} className="d-block mb-2 text-decoration-none text-dark">Về tôi</a>
+                        </Col>
+                    </Row>
+                    // English content
+                    : <Row>
+                        <Col lg={4}>
+                            <span className="fs-4 fw-bold m-0">Raise Your Voice</span>
+                            <p>A simple blog to support victims of sexual assault, especially Vietnamese women abroad, to help them cope with this issue and the post-after trauma.</p>
+                            <p><AtSign size={10} className="ms-3" /> <a href="mailto:ngapt.fit@gmail.com" className="text-decoration-none text-dark">ngapt.fit@gmail.com</a></p>
+                        </Col>
+                        <Col lg={4}>
+                            <h3>Links</h3>
+                            <a href={`${base}detail`} className="d-block mb-2 text-decoration-none text-dark">Learn about sexual abuse</a>
+                            <a href={`${base}organization`} className="d-block mb-2 text-decoration-none text-dark">Victim Support Centers</a>
+                        </Col>
+                        <Col lg={4}>
+                            <a href={`${base}policy`} className="text-decoration-none text-dark d-block mb-2">Privacy Policy</a>
+                            <a href={`${base}term`} className="text-decoration-none text-dark d-block mb-2">Terms and Conditions</a>
+                            <a href={`${base}about`} className="d-block mb-2 text-decoration-none text-dark">About</a>
+                        </Col>
+                    </Row>
+                }
                 <Row className="mt-4">
                     <p className="center-text">2025@RaiseYourVoice. All rights reserved.</p>
                 </Row>

@@ -5,9 +5,10 @@ interface ListCardProps {
     photo: string | "";
     description: string | "";
     references: string | "";
+    language: string | "";
     }
 
-const ListCard = ({ id, name, photo, description, references }: ListCardProps) => {
+const ListCard = ({ id, name, photo, description, references, language }: ListCardProps) => {
     return (
         <Container key={id }>
             {/* make card full width*/}
@@ -20,7 +21,7 @@ const ListCard = ({ id, name, photo, description, references }: ListCardProps) =
                     <Card.Text style={{ color: '#000', textAlign: 'left', fontSize: '1rem' }}>
                         {description}
                     </Card.Text>
-                    <Card.Link href={references} target="_blank">Xem thêm</Card.Link>
+                    <Card.Link href={references} target="_blank">{language === "vi" ? "Xem thêm" : "Read more"}</Card.Link>
                 </Card.Body>
             </Card>
         </Container>
