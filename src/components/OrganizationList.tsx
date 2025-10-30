@@ -5,7 +5,7 @@ import ListCard from "../components/ListCard"
 
 const lang = "en"; // "en" or "vi"
 
-const List = () => {
+const List = ({language }) => {
     return (
         <>
             <section className="py-5 mt-2">

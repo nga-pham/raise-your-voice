@@ -7,9 +7,8 @@ import typeData from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
 
 const base = "/raise-your-voice"
-const lang = "en"; // "en" or "vi"
 
-const Detail = () => {
+const Detail = ({ language, sendDataToApp }) => {
 
     // get selected article from index
     const { id } = useParams(); // 'id' matches the parameter name in the Route path: detail/key-facts/vi/{id}
@@ -36,10 +35,11 @@ const Detail = () => {
     if (!currentArticle) {
         return (
             <div className="min-h-screen">
-                <Header />
+                <Header language={language} sendDataToIndex={sendDataToApp} />
+
                 <section className="py-5">
                     <Container>
-                        {vietnameseData.lang.trim() === lang.trim() ?
+                        {vietnameseData.lang.trim() === language ?
                         <Row className="text-start g-5 mt-2">
                             <h1 style={{ fontWeight: 'bold' }}>Không tìm thấy bài báo</h1>
                             <p>Bài báo bạn yêu cầu không tồn tại. Chúng tôi xin lỗi vì sự bất tiện này.</p>
@@ -51,21 +51,24 @@ const Detail = () => {
                     }
                     </Container>
                 </section>
-                <Footer />
+                <Footer language={language} />
             </div>
         );
     }
 
     return (
         <div className="min-h-screen">
-            <Header />
+            <Header language={language} sendDataToIndex={sendDataToApp} />
+
             <section className="py-5 mt-2">
                 <Container>
                     <Row className="text-center justify-content-center p-3"><Breadcrumb>
                         <Breadcrumb.Item href={base }>Home</Breadcrumb.Item>
                         <Breadcrumb.Item active>{currentArticle.title}</Breadcrumb.Item>
-                    </Breadcrumb></Row>
-                    {vietnameseData.lang.trim() === lang.trim() ? 
+                    </Breadcrumb>
+                    </Row>
+                    {/*Vietnamese content*/}
+                    {vietnameseData.lang.trim() === language ? 
                         <Row className="text-center justify-content-center p-3">
                             {/*title*/}
                             <h2 className="mb-4" style={{ fontWeight: 'bold' }}>{currentArticle.title}</h2>
@@ -94,8 +97,7 @@ const Detail = () => {
                     </Row>
                 </Container>
             </section>
-
-            <Footer />
+            <Footer language={language} />
         </div>
     );
 }

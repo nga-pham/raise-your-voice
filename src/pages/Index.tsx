@@ -2,14 +2,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collections from "../components/Collections";
 
-const Index = () => {
+// props contains language: "en" | "vi"
+const Index = ({ language, sendDataToApp }) => {
     return (
         <div className="min-h-screen">
-            <Header />
+            <Header language={language} sendDataToIndex={sendDataToApp} />
+            <Collections language={language} />
 
-            <Collections />
-
-            <Footer />
+            <Footer language={language} />
         </div>
     );
 };

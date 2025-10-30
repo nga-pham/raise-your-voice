@@ -2,14 +2,14 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import About from "../components/About";
 
-const AboutPage = () => {
+const AboutPage = ({ language, sendDataToApp }) => {
     return (
         <div className="min-h-screen">
-            <Header />
+            <Header language={language} sendDataToIndex={sendDataToApp} />
 
-            <About />
+            <About language={language} />
 
-            <Footer />
+            <Footer language={language} />
         </div>
     );
 };

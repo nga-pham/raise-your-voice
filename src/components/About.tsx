@@ -13,7 +13,7 @@ const proofs = [proof00, proof01, proof02, proof03, proof04, proof05];
 
 const lang = "vi"; // "en" or "vi"
 
-const About = () => {
+const About = ({language }) => {
 
     // for opening donate popup
     const [show, setShow] = useState(false);
@@ -22,7 +22,8 @@ const About = () => {
 
     return (
         <section className="py-5 mt-2">
-            {vietnameseData.lang.trim() === lang.trim() ? 
+            {vietnameseData.lang.trim() === language ?
+                //Vietnamese content
                 <Container>
                     <Row className="text-center p-3">
                         <h2>Về tôi</h2>

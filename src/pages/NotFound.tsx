@@ -3,7 +3,7 @@ import { useEffect } from "react";
 
 const lang = "vi"; // "en" or "vi"
 
-const NotFound = () => {
+const NotFound = ({ language, sendDataToApp }) => {
     const location = useLocation();
 
     useEffect(() => {

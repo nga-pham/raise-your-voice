@@ -5,15 +5,13 @@ import CollectionCard from "../components/CollectionCard"
 import typeOfArticles from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
 
-const lang = "vi"; // "en" or "vi"
-
-const Collections = () => {
+const Collections = ({language}) => {
     const location = useLocation();
     const fullPath = location.pathname.split('/');
     // base : /raise-your-voice
     if (fullPath[1].trim() === "") {
-        // Show vietnamese collections
-        if (vietnameseData.lang.trim() === lang.trim()) {
+        if (vietnameseData.lang.trim() === language) {
+            // Show vietnamese collections
             return (
                 <>
                     {/* Key facts */}
@@ -34,7 +32,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -58,7 +56,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -82,7 +80,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -115,7 +113,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -139,7 +137,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -163,7 +161,7 @@ const Collections = () => {
                                                     content={article.content}
                                                     references={article.references}
                                                     caption={article.caption}
-                                                    language={lang}
+                                                    language={language}
 
                                                 />
                                             )
@@ -179,7 +177,8 @@ const Collections = () => {
 
         // detail page
     } else if (fullPath[1].trim() === "detail") {
-        if (vietnameseData.lang.trim() === lang.trim()) {
+        if (vietnameseData.lang.trim() === language) {
+            // Vietnamese content
             return <section className="py-5 mt-2">
                 <Container>
                     <Row>
@@ -194,7 +193,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )
@@ -212,7 +211,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )
@@ -220,6 +219,7 @@ const Collections = () => {
                     </Row>
                     <Row>
                         {vietnameseData.collectionYouAreNotAlone.map((article, _idx) => {
+                            // English content
                             return (
                                 <CollectionCard
                                     id={_idx}
@@ -230,7 +230,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )
@@ -239,6 +239,7 @@ const Collections = () => {
                 </Container>
             </section>
         } else {
+            // English content
             return <section className="py-5 mt-2">
                 <Container>
                     <Row>
@@ -253,7 +254,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )
@@ -271,7 +272,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )
@@ -289,7 +290,7 @@ const Collections = () => {
                                     content={article.content}
                                     references={article.references}
                                     caption={article.caption}
-                                    language={lang}
+                                    language={language}
 
                                 />
                             )

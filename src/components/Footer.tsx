@@ -5,11 +5,11 @@ const base = import.meta.env.BASE_URL || "/";
 
 const lang = "en"; // "en" or "vi"
 
-const Footer = () => {
+const Footer = ({language }) => {
     return (
         <section style={{ backgroundColor: "#F8F9FA" }}>
             <Container className="text-center pt-4" >
-                {lang.trim() === "vi" ? 
+                {language === "vi" ? 
                 // Vietnamese content
                     <Row>
                         <Col lg={4}>
