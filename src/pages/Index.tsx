@@ -1,9 +1,10 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collections from "../components/Collections";
+import type { PassDataToAppProps } from "../components/interfaceComponentProps";
 
 // props contains language: "en" | "vi"
-const Index = ({ language, sendDataToApp }) => {
+const Index: React.FC<PassDataToAppProps> = ({ language, sendDataToApp }) => {
     return (
         <div className="min-h-screen">
             <Header language={language} sendDataToIndex={sendDataToApp} />

@@ -1,11 +1,12 @@
 ﻿import { Navbar, Nav, Container, Dropdown, DropdownMenu } from "react-bootstrap";
 import { Languages } from 'lucide-react';
+import type { PassDataToIndexProps } from "../components/interfaceComponentProps";
 
 // use Vite-provided base at runtime
 const base = import.meta.env.BASE_URL || "/";
 
 // props contains language: "en" | "vi"
-const Header = ({ language, sendDataToIndex }) => {
+const Header: React.FC<PassDataToIndexProps> = ({ language, sendDataToIndex }) => {
 
     return (
         // collapse below lg (show in one row at lg+). In production, consider change to md
@@ -25,7 +26,7 @@ const Header = ({ language, sendDataToIndex }) => {
                             <Nav.Link href={`${base}about`}>Về tôi</Nav.Link>
                             <Nav.Item><Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                    <Languages /> {language === "en" ? "English" : "Tiếng Việt"}
+                                    <Languages /> {language.trim() === "en" ? "English" : "Tiếng Việt"}
                                 </Dropdown.Toggle>
                                 <DropdownMenu>
                                     <Dropdown.Item as="button" onClick={() => { sendDataToIndex("en") } }>English </Dropdown.Item>

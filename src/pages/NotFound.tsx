@@ -1,9 +1,8 @@
 ﻿import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import type { NoPassDataProps } from "../components/interfaceComponentProps"; 
 
-const lang = "vi"; // "en" or "vi"
-
-const NotFound = ({ language, sendDataToApp }) => {
+const NotFound: React.FC<NoPassDataProps> = ({ language }) => {
     const location = useLocation();
 
     useEffect(() => {
@@ -11,7 +10,7 @@ const NotFound = ({ language, sendDataToApp }) => {
     }, [location.pathname]);
 
     // Show Vietnamese content
-    if (lang.trim() === 'vi') {
+    if (language === 'vi') {
         return (
             <div className="flex min-h-screen items-center justify-center bg-gray-100">
                 <div className="text-center">

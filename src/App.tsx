@@ -29,7 +29,7 @@ const App = () => {
                 {/* other */}
                 <Route path="/organization" element={<Organization language={lang} sendDataToApp={handleLanguageSettingFromChild} />} />
                 <Route path="/about" element={<About language={lang} sendDataToApp={handleLanguageSettingFromChild} />} />
-                <Route path="*" element={<NotFound language={lang} sendDataToApp={handleLanguageSettingFromChild} />} />
+                <Route path="*" element={<NotFound language={lang} />} />
             </Routes>
         </BrowserRouter>
     )

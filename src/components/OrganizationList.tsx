@@ -2,15 +2,14 @@
 import vietnameseData from "../assets/vi.json"
 import englishData from "../assets/en.json"
 import ListCard from "../components/ListCard"
+import type { NoPassDataProps } from "../components/interfaceComponentProps"; 
 
-const lang = "en"; // "en" or "vi"
-
-const List = ({language }) => {
+const List: React.FC<NoPassDataProps> = ({ language }) => {
     return (
         <>
             <section className="py-5 mt-2">
                 <Container>
-                    {vietnameseData.lang.trim() === lang.trim() ? // vietnameseData.organization
+                    {vietnameseData.lang.trim() === language ? // vietnameseData.organization
                         <Row className="text-center justify-content-center p-3">
                             <h2 className="mb-4" style={{ fontWeight: 'bold' }}>Thông tin về các tổ chức hỗ trợ nạn nhân của lạm dụng tình dục tại Việt Nam</h2>
                             <p className="mb-4" style={{ fontSize: '1.5rem' }}>Cùng tìm hiểu về quấy rối, bạo lực và xâm hại tình dục và các vấn đề liên quan</p>
@@ -23,7 +22,7 @@ const List = ({language }) => {
                                             photo={item.photo}
                                             description={item.description}
                                             references={item.references}
-                                            language={lang }
+                                            language={language }
                                         />
                                     )
                                 })}
@@ -41,7 +40,7 @@ const List = ({language }) => {
                                             photo={item.photo}
                                             description={item.description}
                                             references={item.references}
-                                            language={lang}
+                                            language={language}
                                         />
                                     )
                                 })}

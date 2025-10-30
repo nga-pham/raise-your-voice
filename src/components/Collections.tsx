@@ -4,8 +4,9 @@ import englishData from "../assets/en.json"
 import CollectionCard from "../components/CollectionCard"
 import typeOfArticles from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
+import type { NoPassDataProps } from "./interfaceComponentProps"; 
 
-const Collections = ({language}) => {
+const Collections: React.FC<NoPassDataProps> = ({ language }) => {
     const location = useLocation();
     const fullPath = location.pathname.split('/');
     // base : /raise-your-voice

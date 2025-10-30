@@ -5,10 +5,11 @@ import { useParams } from 'react-router-dom';
 import vietnameseData from "../assets/vi.json"
 import typeData from "../assets/type-of-articles.json"
 import { useLocation } from 'react-router-dom';
+import type { PassDataToAppProps } from "../components/interfaceComponentProps";
 
 const base = "/raise-your-voice"
 
-const Detail = ({ language, sendDataToApp }) => {
+const Detail: React.FC<PassDataToAppProps> = ({ language, sendDataToApp }) => {
 
     // get selected article from index
     const { id } = useParams(); // 'id' matches the parameter name in the Route path: detail/key-facts/vi/{id}

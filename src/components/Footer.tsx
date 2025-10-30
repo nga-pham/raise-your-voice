@@ -1,11 +1,10 @@
 ﻿import { Container, Row, Col } from "react-bootstrap";
 import { AtSign } from 'lucide-react';
+import type { NoPassDataProps } from "./interfaceComponentProps";
 // use Vite-provided base at runtime
 const base = import.meta.env.BASE_URL || "/";
 
-const lang = "en"; // "en" or "vi"
-
-const Footer = ({language }) => {
+const Footer: React.FC<NoPassDataProps> = ({ language }) => {
     return (
         <section style={{ backgroundColor: "#F8F9FA" }}>
             <Container className="text-center pt-4" >

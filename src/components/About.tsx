@@ -7,13 +7,12 @@ import proof03 from "../assets/proof03.jpg";
 import proof04 from "../assets/proof04.jpg";
 import proof05 from "../assets/proof05.jpg";
 import qr from "../assets/qr_vpbank.jpg"
-import {useState } from "react"
+import { useState } from "react"
+import type { NoPassDataProps } from "./interfaceComponentProps"; 
 
 const proofs = [proof00, proof01, proof02, proof03, proof04, proof05];
 
-const lang = "vi"; // "en" or "vi"
-
-const About = ({language }) => {
+const About: React.FC<NoPassDataProps> = ({ language }) => {
 
     // for opening donate popup
     const [show, setShow] = useState(false);
