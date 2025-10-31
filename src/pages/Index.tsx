@@ -5,6 +5,8 @@ import type { PassDataToAppProps } from "../components/interfaceComponentProps";
 
 // props contains language: "en" | "vi"
 const Index: React.FC<PassDataToAppProps> = ({ language, sendDataToApp }) => {
+    console.log("Index render with language:", language, localStorage.getItem('lang'))
+
     return (
         <div className="min-h-screen">
             <Header language={language} sendDataToIndex={sendDataToApp} />
