@@ -23,6 +23,7 @@ const About: React.FC<NoPassDataProps> = ({ language }) => {
         <section className="py-5 mt-2">
             {vietnameseData.lang.trim() === language ?
                 //Vietnamese content
+                // about
                 <Container>
                     <Row className="text-center p-3">
                         <h2>Về tôi</h2>
@@ -48,7 +49,8 @@ const About: React.FC<NoPassDataProps> = ({ language }) => {
                             })}
                         </Carousel>
                     </Row>
-                    <Row className="d-flex flex-row mt-4">
+
+                    {/*<Row className="d-flex flex-row mt-4">
                         <p style={{ textAlign: 'left' }}>Nếu quý vị cảm thấy website này có ích, có thể ủng hộ tôi một khoản phí nho nhỏ để duy trì website nhé!</p>
                         <Button variant="info" onClick={handleShow}>Donate</Button>
                         <Modal show={show} onHide={handleClose}>
@@ -65,8 +67,11 @@ const About: React.FC<NoPassDataProps> = ({ language }) => {
                                 </Button>
                             </Modal.Footer>
                         </Modal>
-                    </Row>
+                    </Row>*/}
                 </Container> : 
+
+                // english content
+                // about
                 <Container>
                     <Row className="text-center p-3">
                         <h2>About me</h2>
@@ -84,7 +89,8 @@ const About: React.FC<NoPassDataProps> = ({ language }) => {
                             })}
                         </Carousel>
                     </Row>
-                    <Row className="d-flex flex-row mt-4">
+
+                    {/*<Row className="d-flex flex-row mt-4">
                         <p style={{ textAlign: 'left' }}>If you find this website useful, please buy me a coffee to maintain the website!</p>
                         <Button variant="info" onClick={handleShow}>Donate</Button>
                         <Modal show={show} onHide={handleClose}>
@@ -101,7 +107,7 @@ const About: React.FC<NoPassDataProps> = ({ language }) => {
                                 </Button>
                             </Modal.Footer>
                         </Modal>
-                    </Row>
+                    </Row>*/}
                 </Container>
             }
         </section>

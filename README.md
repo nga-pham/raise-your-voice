@@ -86,6 +86,13 @@ export default defineConfig([
 When publishing to github pages, the following error will appear:
 If you go to child router, such as '${base}detail', you got 404 page (not found)
 
-To fix it, before deploy, go to dist/build folder(*) and make a copy of index.html, rename it to 404.html
+To fix it:
+- In your package.json, make sure this line is set correctly:
+
+```
+"homepage": "https://<your-username>.github.io/<your-repo>"
+```
+
+- before deploy, go to dist/build folder(*) and make a copy of index.html, rename it to 404.html
 
 Github still treats your router as 404 page, but now it looks for 404.html, which is actually the same as index.html. then React Router will direct you to exactly the child page. 
