@@ -10,7 +10,7 @@ const Header: React.FC<PassDataToIndexProps> = ({ language, sendDataToIndex }) =
 
     return (
         // collapse below lg (show in one row at lg+). In production, consider change to md
-    <Navbar bg="light" className="border-bottom" expand="md" sticky="top">
+    <Navbar bg="light" className="shadow-sm" expand="md" sticky="top">
       <Container>
         <Navbar.Brand href={base} className="d-flex align-items-center gap-2">
           <span className="fs-4 fw-bold m-0">Raise Your Voice</span>
